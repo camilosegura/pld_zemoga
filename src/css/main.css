@@ -1,0 +1,75 @@
+#container{
+	margin: auto;
+	position: relative;
+	width: 1300px;
+}
+
+
+.inner-width{
+	margin:auto;
+	width:960px;
+}
+
+.copyright{
+	text-align: center;
+}
+.site-logo{
+	background: url("../img/sprite.png") no-repeat -234px 0;
+	display:block;
+	float:left;
+	height:48px;
+	margin-right:95px;
+	text-indent: -9999px;
+	width: 216px;
+}
+.search{
+	background-color: #EEEEEE;
+	border: none;
+	float: right;
+	height: 26px;
+    width: 165px;
+    padding-left: 10px;
+}
+::-webkit-input-placeholder { color:#004964; }
+::-moz-placeholder { color:#004964; } /* firefox 19+ */
+:-ms-input-placeholder { color:#004964; } /* ie */
+input:-moz-placeholder { color:#004964; }
+.menu-first{
+	color: #004964;
+	float: left;
+	text-transform:uppercase;
+	width: 426px;
+}
+.menu{
+	font-family: 'Hammersmith One', sans-serif;
+	list-style: none;
+	margin: 0px;
+	padding-left: 0px;
+}
+.item{
+	float: left;
+	font-size: 20px;
+	margin-right: 44px;
+}
+
+.item-last{
+	margin: 0px;
+}
+
+.items-sub-menu{
+	display: none;
+}
+#gallery{
+	clear: both;
+}
+
+
+.sprite { background: url('sprite.png') no-repeat top left; width: 23px; height: 23px;  } 
+.sprite.zemoga_ui_comp_test_0002s_0004_icon-tw-copy { background-position: 0 0; } 
+.sprite.zemoga_ui_comp_test_0002s_0008_icon-fb-copy { background-position: -33px 0; } 
+.sprite.zemoga_ui_comp_test_youtube { background-position: -66px 0; } 
+.sprite.zemoga_ui_comp_test_0002s_0003_icon-in-copy { background-position: -99px 0; } 
+.sprite.zemoga_ui_comp_test_google_plus { background-position: -132px 0; } 
+.sprite.zemoga_ui_comp_test_rss { background-position: -165px 0; } 
+.sprite.zemoga_ui_comp_test_search { background-position: -198px 0; width: 26px; height: 25px; } 
+ 
