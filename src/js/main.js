@@ -26,4 +26,4 @@ function loadGalleryData(){
 
 window.onload = function(){
 	loadGalleryData();
-}
+};

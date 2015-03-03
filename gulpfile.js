@@ -23,7 +23,7 @@ gulp.task('jshint', function(){
 });
 
 gulp.task('imagemin', function(){
-	gulp.src('./src/img/*')
+	gulp.src('./src/img/**/*')
 	    .pipe(changed('./build/img'))
 	    .pipe(imagemin())
 	    .pipe(gulp.dest('./build/img'));
@@ -59,7 +59,7 @@ gulp.task('styles', function(){
 
 gulp.task('browser-sync', function(){
 	browserSync({
-		proxy:'http://localhost/pld_zemoga/build/'
+		proxy:'http://datos.local/pld_zemoga/build/'
 	})
 });
 

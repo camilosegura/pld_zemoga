@@ -1,0 +1,21 @@
+.gallery-container{
+	display:relative;
+	margin:auto;
+	width: 1170px;
+}
+
+.gallery-imgs-container{
+	margin:auto;
+	overflow:hidden;
+	width:959px;
+}
+
+.gallery-imgs{
+	font-size: 0px;
+	margin:0px;
+	width:3000px;
+}
+
+.gallery-img-container{
+	display:inline;
+}
