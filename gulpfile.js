@@ -59,7 +59,7 @@ gulp.task('styles', function(){
 
 gulp.task('browser-sync', function(){
 	browserSync({
-		proxy:'http://datos.local/pld_zemoga/build/'
+		proxy:'http://localhost/pld_zemoga/build/'
 	})
 });
 

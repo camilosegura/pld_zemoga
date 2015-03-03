@@ -67,7 +67,11 @@ input:-moz-placeholder { color:#004964; }
 	margin: 0px;
 	padding-left: 0px;
 }
+.item-container{
+	float:left;
+}
 .item{
+	cursor:pointer;
 	float: left;
 	font-size: 20px;
 	margin-right: 37px;
@@ -77,9 +81,31 @@ input:-moz-placeholder { color:#004964; }
 	margin: 0px;
 }
 
-.items-sub-menu{
-	display: none;
+.item:hover + .items-sub-menu{
+	display:block;
 }
+
+.items-sub-menu{
+	background-color: #ECEEEF;
+	border: 1px solid #CCCCCC;
+	display: none;
+	position: absolute;
+	font-size: 14px;
+	min-width: 140px;
+	padding: 12px;
+	top: 32px;
+    z-index: 1;
+}
+
+.items-sub-menu::before {
+	background: url('../img/sprite.png') no-repeat -460px 0;
+	content: "";
+	height: 7px;
+	position: absolute;
+	top: -7px;
+	width: 27px;
+}
+
 #gallery{
 	clear: both;
 }
@@ -137,15 +163,13 @@ input:-moz-placeholder { color:#004964; }
 	color:#646062;
 	font-family: 'Hammersmith One', sans-serif;
     float: left;
+    margin:32px 0px;
     text-align: center;
     width: 30%;
  }
 
-
-
-.footer{
-	background-color:#EBEBEB;
-    clear: both;
+.article-title-container{
+	margin-top:0px;
 }
 
 .article-title{
@@ -154,6 +178,25 @@ input:-moz-placeholder { color:#004964; }
 	font-weight:normal;
 	text-decoration:none;
 	text-transform: capitalize;
+}
+
+.article-first{
+	margin-right: 2.5%;
+}
+
+.article-middle{
+	border-left:1px solid #C1C1C1;
+	border-right:1px solid #C1C1C1;
+	padding: 0 2.3%;
+}
+
+.article-last{
+	margin-left:2.5%;
+}
+
+.footer{
+	background-color:#EBEBEB;
+    clear: both;
 }
 
 .footer-section{
@@ -187,4 +230,11 @@ input:-moz-placeholder { color:#004964; }
 	clear:both;
 	color:#FFFFFF;
 	height:56px;
+}
+
+.copyright-text{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
+    position: relative;
+    top: 18px;
 }
