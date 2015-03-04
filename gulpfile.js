@@ -34,6 +34,11 @@ gulp.task('video', function(){
 	    .pipe(gulp.dest('./build/video'));
 });
 
+gulp.task('font', function(){
+	gulp.src('./src/font/*')
+	    .pipe(gulp.dest('./build/font'));
+});
+
 gulp.task('htmlpage', function(){
 	gulp.src('./src/*.html')
 	    .pipe(changed('./build/'))
@@ -59,11 +64,11 @@ gulp.task('styles', function(){
 
 gulp.task('browser-sync', function(){
 	browserSync({
-		proxy:'http://datos.local/pld_zemoga/build/'
+		proxy:'http://localhost/pld_zemoga/build/'
 	})
 });
 
-gulp.task('default', ['imagemin', 'video', 'htmlpage', 'scripts', 'styles', 'jshint', 'browser-sync'], function(){
+gulp.task('default', ['imagemin', 'video', 'font', 'htmlpage', 'scripts', 'styles', 'jshint', 'browser-sync'], function(){
 	gulp.watch('./src/*.html', function(){
 		gulp.run('htmlpage', reload);		
 	});
