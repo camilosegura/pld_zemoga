@@ -105,8 +105,18 @@ var gallery = {
         });
     },
     setMoreHref: function(){
-        this.more.style.visibility = 'hidden';
+        setTimeout(this.changeMoreVisibility(1), 0);
+        setTimeout(this.changeMoreVisibility(0.8), 400);
+        setTimeout(this.changeMoreVisibility(0.4), 900);
+        setTimeout(this.changeMoreVisibility(0), 1200);
+        setTimeout(this.changeMoreVisibility(0.4), 1400);
+        setTimeout(this.changeMoreVisibility(0.8), 1800);
+        setTimeout(this.changeMoreVisibility(1), 2000);
         this.more.setAttribute("href", this.data.images[this.currentImg - 1].url);
-        this.more.style.visibility = 'visible';
+    },
+    changeMoreVisibility:function(opacity){
+        console.log(opacity);
+        this.more.style.opacity = opacity;
     }
+
 };

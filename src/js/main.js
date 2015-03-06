@@ -24,6 +24,5 @@ function loadGalleryData(){
 	rq.send();
 }
 
-window.onload = function(){
-	loadGalleryData();
-};
+
+(loadGalleryData())();
