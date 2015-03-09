@@ -97,7 +97,7 @@ input:-moz-placeholder { color:#004964; }
 	margin: 0px;
 }
 
-.item:hover + .items-sub-menu{
+.item:hover + .items-sub-menu, .items-sub-menu:hover{
 	display:block;
 }
 
@@ -298,6 +298,7 @@ input:-moz-placeholder { color:#004964; }
     }
 
     .menu-first{
+    	display:none;
     	background-color: #EBEBEB;
     	margin: 10px 0 0 0;    	
     	transition: height 1s;
@@ -364,5 +365,9 @@ input:-moz-placeholder { color:#004964; }
 
     .footer-link{
     	display: block;;
+    }
+    
+    .footer-section-links{
+    	display: none;
     }
 }

@@ -64,45 +64,43 @@ var gallery = {
     },
 
     setPrevEvent: function(){
-        var that = this;
-
-        this.prev.addEventListener('click', function(e){
-            e.stopPropagation();
-
-            if(that.currentImg > 1){
-
-                that.curMargin = that.curMargin + 959;
-                that.imgs.style.marginLeft = that.curMargin + "px";
-
-                that.currentImg--;
-            }else{
-                that.curMargin =  -(959 * (that.totalImgs - 1));
-                that.imgs.style.marginLeft = that.curMargin + "px";
-
-                that.currentImg = that.totalImgs;
-            }
-            that.setMoreHref();
-        });
+        this.prev.addEventListener('click', this.prevEventListener.bind(this));
     },
+    prevEventListener: function(e){
+        e.stopPropagation();
 
+        if(this.currentImg > 1){
+
+        	this.curMargin = this.curMargin + 959;
+        	this.imgs.style.marginLeft = this.curMargin + "px";
+
+        	this.currentImg--;
+        }else{
+        	this.curMargin =  -(959 * (this.totalImgs - 1));
+        	this.imgs.style.marginLeft = this.curMargin + "px";
+
+        	this.currentImg = this.totalImgs;
+        }
+        this.setMoreHref();
+    },
     setNextEvent: function(){
-        var that = this;
-        this.next.addEventListener('click', function(e){
-            e.stopPropagation();
-            console.log(that.currentImg);
-            if(that.currentImg < that.totalImgs){
+        this.next.addEventListener('click',this.nextEventListener.bind(this));
+    },
+    nextEventListener:function(e){
+    	e.stopPropagation();
+        console.log(this.currentImg);
+        if(this.currentImg < this.totalImgs){
 
-                that.curMargin = that.curMargin - 959;
-                that.imgs.style.marginLeft = that.curMargin + "px";
+            this.curMargin = this.curMargin - 959;
+            this.imgs.style.marginLeft = this.curMargin + "px";
 
-                that.currentImg++;
-            }else{
-                that.curMargin = 0;
-                that.imgs.style.marginLeft = that.curMargin + "px";
-                that.currentImg = 1;
-            }
-            that.setMoreHref();
-        });
+            this.currentImg++;
+        }else{
+            this.curMargin = 0;
+            this.imgs.style.marginLeft = this.curMargin + "px";
+            this.currentImg = 1;
+        }
+        this.setMoreHref();
     },
     setMoreHref: function(){
         setTimeout(this.changeMoreVisibility(1), 0);
