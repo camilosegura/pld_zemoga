@@ -1,3 +1,7 @@
+body{
+		margin: 0;
+	}
+
 ul{
 	list-style:none;
 	padding-left:0px;
@@ -57,6 +61,11 @@ ul a{
 	height: 26px;
 	width: 26px;
 }
+
+.menu-collapse{
+	display: none;
+}
+
 ::-webkit-input-placeholder { color:#004964; }
 ::-moz-placeholder { color:#004964; } /* firefox 19+ */
 :-ms-input-placeholder { color:#004964; } /* ie */
@@ -243,7 +252,7 @@ input:-moz-placeholder { color:#004964; }
 	display:inline-block;
 	font-family: 'Hammersmith One', sans-serif;
 	font-size:15px;
-	margin-bottom:20px;
+	padding-bottom:13px;
 }
 
 .copyright{
@@ -258,4 +267,102 @@ input:-moz-placeholder { color:#004964; }
 	font-size: 14px;
     position: relative;
     top: 18px;
+}
+
+
+@media (max-width: 768px){
+	body{
+		margin: 8px 0;
+	}
+	#container, .inner-width, .gallery-container, .gallery-imgs-container, .article{
+	    margin: 0;	    
+	    width: 100%;
+    }
+
+    .search-container, .middle-bar{
+    	display: none;
+    }
+
+    .menu-collapse{
+    	border: none;
+    	border-radius:4px;
+	    display: block;
+	    float: right;
+	    background: url('../img/sprite.png') no-repeat -492px 6px;
+	    padding: 17px;
+	    width: 24px; height: 24px;
+    }
+
+    .menu-collapse:hover, .footer-section:hover{
+    	background-color: #DDDDDD;    	
+    }
+
+    .menu-first{
+    	background-color: #EBEBEB;
+    	margin: 10px 0 0 0;    	
+    	transition: height 1s;
+    	width: 100%;
+    }
+    .site-logo{
+    	margin-right: 0;
+    	margin-left: 8px;
+    }
+    .item, .item-container{
+    	float: none;
+    }
+
+    .item-container{
+    	border-bottom: 1px solid #C1C1C1;
+    	padding: 10px;
+    }
+
+    .item{
+    	display: block;
+    }
+
+    .item-container:hover{
+        background-color: #DBDBDB;
+    }
+
+    .items-sub-menu{
+    	border: none;    	
+    	display:block;
+    	padding:0;
+    	position: inherit;
+    	top: 0;
+    }
+    .items-sub-menu::before{
+    	background: none;
+		content: "";
+		height: 0;
+		position: relative;
+		top: 0;
+		width: 0;
+    }
+
+    .item-link{
+    	border-bottom: 1px solid #C1C1C1;
+    	display: block;
+    	padding: 1px 5px;
+    }
+    .item-link:hover, .footer-link:hover{
+    	background-color: #D1D1D1;
+    }
+    .article{
+    	float: none;
+    	padding: 0;
+    }
+    .article-middle{
+    	border: none;
+    }
+    .footer-section{
+    	cursor: pointer;
+    	float: none;
+    	padding: 5px 0 5px 1%;
+    	width: 99%;
+    }
+
+    .footer-link{
+    	display: block;;
+    }
 }
